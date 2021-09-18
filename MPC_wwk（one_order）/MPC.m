@@ -54,13 +54,15 @@ while idx < length(ref_x)-1
     latError_MPC(end+1,:) = [idx,latError];
     
     % »­¸ú×Ù¹ì¼£Í¼
+    subplot(2,1,1)
     plot(x,y,'r*')
     hold on
     pause(0.01);
 end
-figure(2)
+title('Î»ÖÃ')
+subplot(2,1,2)
 plot(latError_MPC(:,2),'LineWidth',2)
-
+title('Îó²î')
 %% ±£´æ
 path_MPC = pos_actual;
 save path_MPC.mat path_MPC

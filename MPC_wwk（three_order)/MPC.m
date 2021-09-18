@@ -59,11 +59,15 @@ while idx < length(ref_x)-1
     Error_W(end+1) = U(2);
     
     % »­¸ú×Ù¹ì¼£Í¼
+    subplot(2,1,1)
     plot(x,y,'r*')
     hold on
     pause(0.01);
 end
-figure(2)
+title('Î»ÖÃ')
+%figure(2)
+subplot(2,1,2)
+title('Îó²î')
 plot(latError_MPC(:,2),'LineWidth',2)
 figure(3)
 plot(Error_V(2:end)-Error_V(1:end-1),'LineWidth',2)
